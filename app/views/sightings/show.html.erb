@@ -1,0 +1,9 @@
+<h1>Sightings of <%= @species.name %></h1>
+<ul>
+  <% @species.sightings.each do |sighting| %>
+      <li><%= sighting.location %> : <%= sighting.date.strftime("%b %e, %Y") %>, <%= sighting.time.strftime("%I:%M") %></a></li>
+  <% end %>
+</ul>
+
+
+<button><a href="/">Go Back</a></button>
