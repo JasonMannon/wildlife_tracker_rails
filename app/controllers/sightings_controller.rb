@@ -35,7 +35,8 @@ class SightingsController < ApplicationController
     @sighting = Sighting.new(:species_id => params[:species_id],
                              :location => params[:location],
                              :date => params[:date],
-                             :time => params[:time])
+                             :time => params[:time],
+                             :region_id => params[:region_id])
     if @sighting.save
       render('sightings/success.html.erb')
     else
@@ -43,4 +44,9 @@ class SightingsController < ApplicationController
     end
   end
 
+  def destroy
+    @sighting = Sighting.find(params[:id])
+    @sighting.destroy
+    render('sightings/destroy.html.erb')
+  end
 end

@@ -5,4 +5,5 @@ describe Sighting do
   it { validate_presence_of :date }
   it { validate_presence_of :time }
   it { should belong_to :species }
+  it { should belong_to :region }
 end

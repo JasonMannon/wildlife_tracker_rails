@@ -1,0 +1,10 @@
+<h1><%= @region.name %></h1>
+
+<a href="/regions/<%= @region.id %>/edit">Edit</a></p>
+
+<button><a href="/regions/<%= @region.id %>"
+  data-confirm="You sure?"
+  data-method="delete"
+  rel="nofollow">Delete</a></button>
+
+<button><a href="/">Go back</a></button>

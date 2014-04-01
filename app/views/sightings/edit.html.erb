@@ -19,3 +19,12 @@
   <input id="sighting_time" name="time" type="time">
   <button>Update Sighting</button>
 </form>
+
+<button>
+  <a href="/sightings/<%= @sighting.id %>"
+    data-confirm="You sure?"
+    data-method="delete"
+    rel="nofollow">Delete</a>
+</button>
+<button><a href="/">Go Back</a></button>
+

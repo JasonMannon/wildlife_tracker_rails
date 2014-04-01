@@ -1,0 +1,19 @@
+<h1>Edit <%= @region.name %></h1>
+
+
+<% if @region.errors.any? %>
+  <h3>Please fix these errors:</h3>
+  <ul>
+    <% @regions.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<form action="/regions" method="post">
+  <label for="region_name">Name</label>
+  <input id="region_name" name="name" type="text">
+  <button>Update Region</button>
+</form>
+
+
