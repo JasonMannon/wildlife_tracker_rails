@@ -3,4 +3,10 @@
 edit
 delete
 
-<a href="/">Go Back</a>
+<p><a href="/species/<%= @species.id %>/edit">Edit</a></p>
+<p><a href="/species/<%= @species.id %>"
+  data-confirm="You sure?"
+  data-method="delete"
+  rel="nofollow">Delete</a></p>
+
+<button><a href="/">Go Back</a></button>
