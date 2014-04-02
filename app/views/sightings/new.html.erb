@@ -16,5 +16,10 @@
   <input id="sighting_date" name="date" type="date">
   <label for="sighting_time">Time</label>
   <input id="sighting_time" name="time" type="time">
+  <select name="region_id">
+     <%= Region.all.each do |region| %>
+    <option value="<%= region.id %>"><%= region.name %></option>
+    <% end %>
+  </select>
   <button>Create New Sighting</button>
 </form>

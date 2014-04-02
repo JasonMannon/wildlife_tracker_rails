@@ -20,7 +20,8 @@ class SightingsController < ApplicationController
     @sighting = Sighting.find(params[:id])
     if @sighting.update(:location => params[:location],
                                 :date => params[:date],
-                                :time => params[:time])
+                                :time => params[:time],
+                                :region_id => params[:region_id])
       render('sightings/success.html.erb')
     else
       render('sightings/edit.html.erb')
